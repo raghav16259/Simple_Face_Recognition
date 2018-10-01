@@ -7,6 +7,7 @@ print x
 
 try:
 	test1 = cv2.imread(x)
+	#added line 5
 	gray_img = cv2.cvtColor(test1, cv2.COLOR_BGR2GRAY)
 	haar_face_cascade = cv2.CascadeClassifier('abcd.xml')
 	faces = haar_face_cascade.detectMultiScale(gray_img, scaleFactor=1.1, minNeighbors=5)
