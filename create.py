@@ -9,7 +9,8 @@ try:
 	test1 = cv2.imread(x)
 	gray_img = cv2.cvtColor(test1, cv2.COLOR_BGR2GRAY)
 	haar_face_cascade = cv2.CascadeClassifier('abcd.xml')
-	faces = haar_face_cascade.detectMultiScale(gray_img, scaleFactor=1.1, minNeighbors=5)
+	faces = haar_face_cascade.detectMultiScale(gray_img , scaleFactor=1.1, minNeighbors=5)
+	#added line
 
 	for (x,y,w,h) in faces:
 	    cv2.rectangle(test1,(x,y),(x+w,y+h),(255,0,0),2)
